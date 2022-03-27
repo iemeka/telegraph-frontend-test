@@ -15,8 +15,8 @@
   let isCommentFetched = false;
   const DELAY_MS = 200;
 
-  // Keep checking if DOM is loaded and comment is fetched.
   const intervalID = setInterval(() => {
+    // Keep checking if DOM is loaded and comments have been fetched.
     if (isDOMLoaded && isCommentFetched) {
       clearInterval(intervalID);
       init();
@@ -27,6 +27,7 @@
     isDOMLoaded = true;
   });
 
+  // start fetching comments
   fetchComments()
     .then((result) => {
       comments = result;
