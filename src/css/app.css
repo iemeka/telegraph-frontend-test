@@ -2,7 +2,18 @@
 @import "elements/site-logo.css";
 @import "elements/home.css";
 
+:root {
+  --border-color: #e1e1e1;
+  --dark: #000;
+  --white: #fff;
+}
+
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 0 0.5rem;
 }

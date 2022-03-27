@@ -1,14 +1,13 @@
 .site-logo {
-	height: 26px;
-	padding: 1rem;
-	width: 160px;
+  height: 31px;
+  width: 190px;
+	padding: 2rem 0;
 }
 
-@media (min-width: 768px) {
-	.site-logo {
-		height: 31px;
-		padding-bottom: 2rem;
-		padding-top: 2rem;
-		width: 190px;
-	}
+@media only screen and (max-width: 642px) {
+  .site-logo {
+    height: 26px;
+    width: 160px;
+		padding: 1rem 0;
+  }
 }

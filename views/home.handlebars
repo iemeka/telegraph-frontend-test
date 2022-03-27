@@ -1,12 +1,11 @@
-<main class="container flex justify-center">
-  <div class="content-area flex">
-    <div class="content">
-      <section class="comments-header flex align-center">
+<div class="content-area">
+  <div class="content">
+    <section class="comments-header">
+      <div class="comments-header-item">
         <svg
+          class="comment-icon"
           version="1.0"
           xmlns="http://www.w3.org/2000/svg"
-          width="20px"
-          height="20px"
           viewBox="0 0 64.000000 64.000000"
           preserveAspectRatio="xMidYMid meet"
         >
@@ -21,24 +20,26 @@
             ></path>
           </g>
         </svg>
-        <span class="comment-counter">5 Comments</span>
+        <span class="comment-label">5 Comments</span>
+      </div>
+      <div class="comments-header-item">
         <span class="sort-text">Sort</span>
-        <button class="button-likes" id="button-likes">Likes</button>
-      </section>
-      <section class="comments-body" id="comment-body">
-        {{!-- <div class="row">
-          <div class="row-header flex justify-between">
-            <span class="username">User Name</span>
-            <span class="likes">12 Likes</span>
+        <button class="sort-by-likes-btn" id="sort-by-likes-btn">Likes</button>
+      </div>
+    </section>
+    <section id="comment-list">
+      {{! <div class="comment">
+        <div class="username">User Name</div>
+        <div class="comment-grid">
+          <div class="comment-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex
           </div>
-          <div class="comment-holder flex">
-            <span class="comment">Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex</span>
-          </div>
-        </div> --}}
-      </section>
-    </div>
+        </div>
+        <div class="likes">12 Likes</div>
+      </div> }}
+    </section>
   </div>
-</main>
+</div>
