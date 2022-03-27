@@ -16,7 +16,13 @@ function composeComments(comment) {
     comment.body == null ||
     comment.likes == null
     ? ""
-    : `<div class="comment"><div class="username">${comment.name}</div><div class="comment-grid"><div class="comment-text">${comment.body}</div></div><div class="likes">${comment.likes} Likes</div></div>`;
+    : `<div class="comment"><div class="username">${
+        comment.name
+      }</div><div class="comment-grid"><div class="comment-text">${
+        comment.body
+      }</div></div><div class="likes">${comment.likes} ${
+        comment.likes <= 1 ? "Like" : "Likes"
+      }</div></div>`;
 }
 
 function composeCommentHTML(comments) {
@@ -24,7 +30,8 @@ function composeCommentHTML(comments) {
   return comments.map((comment) => composeComments(comment)).join("");
 }
 
-function sortCommentByLikes(comments = []) {
+function sortCommentByLikes(comments) {
+  if (!Array.isArray(comments)) return [];
   return [...comments].sort((a, b) =>
     a.likes != null && b.likes != null ? b.likes - a.likes : 0
   );
